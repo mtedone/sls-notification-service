@@ -8,9 +8,11 @@ plugins:
 provider:
   name: aws
   runtime: nodejs12.x
+  region: 'eu-west-2'
+  profile: 'marco-sls'
   memorySize: 256
   stage: ${opt:stage, 'dev'}
-  
+
 functions:
   hello:
     handler: src/handlers/hello.handler
